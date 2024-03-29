@@ -40,6 +40,12 @@ Lightweight, cross-platform(windows, linux, mac) file explorer with advanced fea
 ![image](https://github.com/adarshjhaa100/enhanced-file-explorer/assets/31096082/fdf71f02-1488-4b3b-b59f-2bd99e5f8579)
 
 
+<strong> Frontend Design : For explorer - V1 </strong>
+![image](https://github.com/adarshjhaa100/enhanced-file-explorer/assets/31096082/0883b08f-20e9-4760-8af2-dad1bd47f673)
+
+
+
+
 <strong> Execution Flow for operations </strong>:
 
 ![image](https://github.com/adarshjhaa100/enhanced-file-explorer/assets/31096082/36684d33-297f-4099-9acc-be0fbec3e692)
