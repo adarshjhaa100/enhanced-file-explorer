@@ -1,0 +1,32 @@
+Setting up of linux:
+sudo apt install libwebkit2gtk-4.0-dev \
+    build-essential \
+    curl \
+    wget \
+    file \
+    libssl-dev \
+    libgtk-3-dev \
+    libayatana-appindicator3-dev \
+    librsvg2-dev
+
+
+Create Tauri APP:
+sh <(curl https://create.tauri.app/sh)
+
+
+Start Tauri Dev Window:
+npm run tauri dev
+
+
+Install tauri cli: npm install --save-dev @tauri-apps/cli
+
+
+File system basics: https://doc.rust-lang.org/rust-by-example/std_misc/fs.html
+
+File open: https://doc.rust-lang.org/std/fs/struct.File.html#method.open
+
+
+/home/tcsc/Documents/expts/1brctest/1brc/measurements.txt
+
+
+SheetJS with Tauri: https://docs.sheetjs.com/docs/demos/desktop/tauri/

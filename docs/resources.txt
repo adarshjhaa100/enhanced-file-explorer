@@ -1,0 +1,4 @@
+File System API: https://developer.mozilla.org/en-US/docs/Web/API/File_System_API
+
+By default browsers use this:
+Origin private file system: https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system

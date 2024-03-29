@@ -1,0 +1,6 @@
+TODO:
+    Init a PWA app
+    With a basic styling, load the list of directory
+    Try to do file reads
+
+    
