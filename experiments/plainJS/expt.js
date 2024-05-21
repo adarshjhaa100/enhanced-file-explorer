@@ -7,14 +7,31 @@ async function getDirectoryHandle(){
     return handle;
 }
 
+
+/**
+ * 
+ * @param {number} a 
+ * @param {number} b 
+ * @returns 
+ */
+function add(a, b){
+    
+    return a+b;
+}
+
 const dirOpenBtn = document.getElementById("dir-picker");
 const dirContent = document.getElementById("directoryStructure");
+
+document.getElementById("sample-btn").addEventListener("click", ()=>{
+    console.log(document.getElementById("email").value)
+})
 
 
 
 
 if(window.isSecureContext){
     dirOpenBtn.addEventListener("click", async (e)=>{
+        
         const dirHandle = await getDirectoryHandle();
         let count =0;
         
