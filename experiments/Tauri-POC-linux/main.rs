@@ -29,7 +29,6 @@ fn greet(name: &str) -> String {
 }
 
 
-
 #[tauri::command] // 
 fn read_dir(name : &str) -> Vec<Vec<String>> {
     // declaring a variable
@@ -75,8 +74,6 @@ fn read_dir(name : &str) -> Vec<Vec<String>> {
 
     return dir_items; 
 }
-
-
 
 
 use std::time::UNIX_EPOCH;
@@ -147,13 +144,23 @@ fn read_file_custom(name: &str, offset1: i64) -> Result<String, String> {
     
 }
 
+use std::chrono::Local;
+fn clock(){
+    let current_time = Local::now()
+    let hour = current_time.hour()
+    let minute = current_time.minute()
+    let second = current_time.second()
+
+    println!("{:02}:{:02}:{:02}", hour, minute, second);
+}
 
 fn main() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![
             greet, 
             read_dir,
-            read_file_custom
+            read_file_custom,
+            clock
             ]) //add the rust function here to invoke from JS
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
