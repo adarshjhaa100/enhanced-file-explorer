@@ -1,9 +1,17 @@
-import { useState } from "react";
+import {
+  JSXElementConstructor,
+  Key,
+  ReactElement,
+  ReactNode,
+  ReactPortal,
+  useState,
+} from "react";
 import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
 import { utils as xlutils } from "xlsx";
 import { saveFile } from "./utilities/SaveUtility";
 import { Folder } from "./Folder";
+import useStore from "./utilities/Store";
 
 export const data = [
   {
@@ -50,13 +58,14 @@ export const data = [
 
 function App() {
   const [name, setName] = useState("/");
-
   const DIR_LIST: any[] = [];
   const [dirContents, setDirContents] = useState(DIR_LIST);
   const a: any = null;
   const [currentFileContent, setcurrentFileContent] = useState(a);
   const [isFileOpen, setIsFileOpen] = useState(false);
   const [time, setTime] = useState(0);
+
+  const dataStore = useStore((state: any) => state.dataStore);
 
   async function createXLWorksheet(params: any[][]) {
     const ws = xlutils.aoa_to_sheet(params);
@@ -85,7 +94,6 @@ function App() {
       offset1: 0,
     });
 
-    // console.log(data);
     setcurrentFileContent(await data);
     setIsFileOpen(!isFileOpen);
   }
@@ -111,7 +119,38 @@ function App() {
             </div>
           ))}
         </div>
-        <div className="directoryContent"></div>
+        <div className="directoryContent">
+          <div className="directoryContentHeader">
+            <h1>File Name</h1>
+            <h1>Size</h1>
+            <h1>Date Created</h1>
+            <h1>Date Modified</h1>
+            <h1>Format</h1>
+          </div>
+          <div className="directoryContentMain">
+            {dataStore.map(
+              (
+                item: {
+                  dir:
+                    | string
+                    | number
+                    | boolean
+                    | ReactElement<any, string | JSXElementConstructor<any>>
+                    | Iterable<ReactNode>
+                    | ReactPortal
+                    | null
+                    | undefined;
+                  isFolder: any;
+                },
+                index: Key | null | undefined
+              ) => (
+                <div key={index}>
+                  {item.dir} - {item.isFolder ? "Folder" : "File"}
+                </div>
+              )
+            )}
+          </div>
+        </div>
       </div>
     </main>
   );
