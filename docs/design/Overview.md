@@ -17,7 +17,7 @@ Lightweight, cross-platform(windows, linux, mac) file explorer with advanced fea
 - Tabbed Window (v2)
 - File Sync Over Network (Maybe)
 - Clean UI
-- Advanced Navigation
+- Advanced Navigation (Need to figure out what is it supposed to be)
 <br/>
 
 ##### Technical Functional:
