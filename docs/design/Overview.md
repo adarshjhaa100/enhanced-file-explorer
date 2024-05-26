@@ -13,6 +13,7 @@ Lightweight, cross-platform(windows, linux, mac) file explorer with advanced fea
 - Current View Export (could be automated)
 - Search (Similar to apple spotlight)
 - File Reader (Large File)
+- Bookmarks - Show shortcut in the directory pane/home ( Favourites )
 - Multi Window (v2)
 - Tabbed Window (v2)
 - File Sync Over Network (Maybe)
