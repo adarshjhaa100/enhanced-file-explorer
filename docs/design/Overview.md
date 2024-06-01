@@ -19,6 +19,7 @@ Lightweight, cross-platform(windows, linux, mac) file explorer with advanced fea
 - File Sync Over Network (Maybe)
 - Clean UI
 - Advanced Navigation (Need to figure out what is it supposed to be)
+- Chat with files ( using LLM )
 <br/>
 
 ##### Technical Functional:
