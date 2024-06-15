@@ -20,6 +20,9 @@ Lightweight, cross-platform(windows, linux, mac) file explorer with advanced fea
 - Clean UI
 - Advanced Navigation (Need to figure out what is it supposed to be)
 - Chat with files ( using LLM )
+- Embedded Terminal
+- Enhanced toolbar (bookmark, search etc. present with context menu and shortcut key)
+- Programmable and customizable
 <br/>
 
 ##### Technical Functional:
