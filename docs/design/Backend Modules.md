@@ -2,6 +2,7 @@
 #### MASTER COLLECTION OF CONTENT
 #### UPDATE SIDEBAR BASED ON CONTEXT ( FILE HAI TOH ALAG SIDEBAR, DIRECTORY ME ALAG )
 #### ENHANCED SIDEBAR
+#### EVERYTHING EXPORTABLE
 
 ### Directory
 
@@ -25,6 +26,15 @@
 - Customizable
 
 
+
+### Search management
+- Similar to vscode search/or intellij. spotlight? Not that interesting (or maybe something else)
+- Indexing
+- Low memory consumption when using
+- save search results
+
+
+
 ### File
 
 <> Open File
@@ -38,7 +48,8 @@
 
 <> Collection
 - Add selected text to collection
-- Abe to save
+- Able to save
+- Exportable
 
 <> Additional stuff
 - Options like base64 decode/encode
@@ -47,6 +58,7 @@
 
 
 ### Session Management
+- Make all operations non blocking/async if possible and feasible
 - Tabbed windows
 - Windows with their own session/profile
 - Opened file with their own session
@@ -58,3 +70,5 @@
 - Global toolbar
 
 
+###  Storage of Metadata and Other Stuff - Pure Backend 
+- SQLite?
