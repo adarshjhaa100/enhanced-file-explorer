@@ -15,16 +15,38 @@ use std::{
 
 
 
-// use serde::de::value::Error;
 
-// use serde::de::value::Error;
-// use serde_json::Error;
+
+
+// Module Structure
+pub mod file_explorer_api {
+
+    pub mod fs_directory {
+
+    }
+
+    pub mod fs_file {
+
+    }
+
+    pub mod search {
+        
+    }
+
+    pub mod export {
+
+    }
+    
+
+}
+
 
 
 
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command] // this is an annotation
 fn greet(name: &str) -> String {
+    
     return format!("Hello, {}! You've been greeted from Rust!", name)
 }
 
