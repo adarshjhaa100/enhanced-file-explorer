@@ -3,30 +3,110 @@
     root
       window
         windowHeader
+          headerNavigationControls
+          headerCurrentDirPath
+          headerCurrentViewCustomize
+          headerSearch
         windowMain
           sidebar
+            sidebarItem
+            sidebarSection
           windowContent
         windowFooter
 
 */
 
+
+/* 
+  TODO: Color scheme based on user selection, customizable 
+
+*/
+
+/* html { overflow-y: hidden; overflow-x: hidden; } */
+
+
 .window {
-  background-color: blanchedalmond;
+  /* background-color: blanchedalmond; */
   margin: -8px;
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
+  overflow-y: hidden;
+
+
+
+  /* Custom properties */
+  /* header */
+  --sidebar-width: 25%;
+  --header-path-width: 40%;
+  --search-component-width: 31%;
+  --border-style-theme1: solid 2px #78909C;
+
+  /* sidebar */
+  --sidebar-padding-left: 2%;
+  --sidebar-padding-top:  1%;
+  --sidebar-section-margin-bottom: 5%;
 }
 
+
+/* HEADER STYLES */
+
 .windowHeader {
-  background-color: rgb(44, 43, 43);
-  padding: 20px;
+  background-color: rgb(219, 217, 217);
+  padding-top: 15px;
+  padding-bottom: 15px;
   display: flex;
   flex-direction: row;
-  color: white;
+  color: rgb(0, 0, 0);
   min-height: 6.7dvh;
-  font-weight: 800;
+  font-weight: 400;
 }
+
+.headerNavigationControls {
+  min-width: var(--sidebar-width);
+  /* border: solid 1px black; */
+  display: flex;
+  flex-direction: row;
+  padding-top: 5px;
+  /* padding-left: 15px; */ 
+}
+.headerCurrentDirPath {
+  /* margin-left: 10px; */
+  border: var(--border-style-theme1);
+  border-radius: 10px;
+  min-width: var(--header-path-width);
+  margin-bottom: -4px;
+  padding-top: 4px;
+  padding-left: 7px;
+  display: flex;
+  flex-direction: row;
+  background-color: #f6f6f6;
+  
+}
+.headerCurrentViewCustomize {
+  margin-left: 10px;
+  /* border: solid 1px black */
+}
+.headerSearch {
+  border: var(--border-style-theme1);
+  border-radius: 10px;
+  min-width: var(--search-component-width);
+  margin-bottom: -4px;
+  margin-left: 10px;
+  padding-top: 4px;
+  padding-left: 7px;
+  display: flex;
+  flex-direction: row;
+  background-color: #f6f6f6;
+}
+
+
+/* HEADER STYLES END */
+
+
+
+
+
 
 .windowMain {
   background-color: rgb(248, 253, 252);
@@ -36,29 +116,58 @@
   min-height: 86.5dvh;
 }
 
+
+/* SIDEBAR STYLES */
+
 .sidebar {
   display: flex;
-  padding-left: 20px;
+  padding-left: var(--sidebar-padding-left);
+  padding-top: var(--sidebar-padding-top);
   flex-direction: column;
-  min-width: 25%;
-  background-color: aquamarine;
+  min-width: var(--sidebar-width);
+  background-color: #ebeaea; 
   min-height: 100%;
+  border: solid 1px #FFFFFF;
 }
+
+.sidebarSection {
+  margin-bottom: var(--sidebar-section-margin-bottom);
+  display: flex;
+  flex-direction: column;
+  font-weight: 800;
+  color: rgb(164, 164, 164);
+}
+
+.sidebarSectionHeader {
+  margin-bottom: 10px;
+}
+
+.sidebarItem {
+  display: flex;
+  flex-direction: row;
+  font-weight: 400;
+  color: black;
+  font-size: 14px;
+}
+
+.sidebarItemText {
+  /* background-color: aqua; */
+  margin-top: -5px;
+}
+
+
+
+
+/* SIDEBAR STYLES END */
 
 .windowContent {
   display: flex;
   flex-direction: column;
   min-width: 75%;
   min-height: 100%;
-  background-color: rgb(102, 108, 218);
+  background-color: #fef9f9;
   flex-direction: column;
 }
-
-/* .directoryContentHeader {
-  padding: 10px;
-  display: flex;
-  gap: 30px;
-} */
 
 .windowFooter {
   background-color: rgb(44, 43, 43);
@@ -66,6 +175,8 @@
   display: flex;
   flex-direction: row;
   color: white;
-  min-height: 5.8dvh;
+  /* min-height: 3dvh; */
   font-weight: 800;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
 }

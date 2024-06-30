@@ -169,8 +169,9 @@ fn read_file_custom(name: &str, offset1: i64) -> Result<String, String> {
     
 }
 
-
+ 
 fn main() {
+
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![
             greet, 

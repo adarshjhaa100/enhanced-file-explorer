@@ -6,10 +6,12 @@ import { saveFile } from "./utilities/SaveUtility";
 import Sidebar from "./components/Sidebar/Sidebar";
 import WindowContent from "./components/WindowContent/WindowContent";
 import PrimaryHeader from "./components/PrimaryHeader/PrimaryHeader";
-import PrimaryFooter from "./components/PrimaryFooter/PrimaryFooter";
+// import PrimaryFooter from "./components/PrimaryFooter/PrimaryFooter";
 
 function App() {
   const [name, setName] = useState("/");
+  let TABLE_CONST: any = null;
+  const [tableView, setTableView] = useState(TABLE_CONST);
 
   const DIR_LIST:any[] = [];
   const [dirContents, setDirContents] = useState(DIR_LIST);
@@ -52,23 +54,21 @@ function App() {
     setcurrentFileContent(await data);
     setIsFileOpen(!isFileOpen);
   }
- 
+
+//  console.log(readDir("/"));
 
   return (<main className = "window">
-    <header className="windowHeader">
-      <PrimaryHeader/>
-    </header>
     
-    <div className="windowMain">
-      <div className="sidebar">
-        <Sidebar/>
-      </div>
-      <div className="windowContent">
-       <WindowContent/>
-       </div>
-       
-    </div>
-       <PrimaryFooter/>
+      <PrimaryHeader/>
+        <div className="windowMain">
+          <Sidebar/>
+          <WindowContent 
+              tableView = {tableView}
+              setTableView = {setTableView}
+              /> 
+        </div>
+       {/* <PrimaryFooter tableView = {tableView}
+             /> */}
        
 
   </main>);

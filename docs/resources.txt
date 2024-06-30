@@ -2,3 +2,8 @@ File System API: https://developer.mozilla.org/en-US/docs/Web/API/File_System_AP
 
 By default browsers use this:
 Origin private file system: https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system
+
+
+Icons: https://www.svgrepo.com/svg/510165/right-arrow
+
+material react table: npm i material-react-table @mui/material @mui/x-date-pickers @mui/icons-material @emotion/react @emotion/styled

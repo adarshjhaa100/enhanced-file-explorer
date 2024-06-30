@@ -1,13 +1,16 @@
+import Example from "./Example";
 
 
 
 
-const WindowContent: React.FC = ()=>{
+const WindowContent: React.FC<any> = (props: any)=>{
 
-
-    return <>
-        Hello From WindowContent
-    </>
+    const {tableView, setTableView} = props;
+    
+    return <div className="windowContent">
+               <Example tableView = {tableView}
+              setTableView = {setTableView}/>
+            </div>
 
 };
 
