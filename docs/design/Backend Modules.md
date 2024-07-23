@@ -3,6 +3,7 @@
 #### UPDATE SIDEBAR BASED ON CONTEXT ( FILE HAI TOH ALAG SIDEBAR, DIRECTORY ME ALAG )
 #### ENHANCED SIDEBAR
 #### EVERYTHING EXPORTABLE
+#### different profiles for different OS
 
 ### Directory
 
