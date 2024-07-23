@@ -68,7 +68,7 @@
 ### Utilities
 - File Export
 - Global toolbar
-
+- Map programs with shortcuts
 
 ###  Storage of Metadata and Other Stuff - Pure Backend 
 - SQLite?
