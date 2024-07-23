@@ -14,6 +14,7 @@ Lightweight, cross-platform(windows, linux, mac) file explorer with advanced fea
 - Search (Similar to apple spotlight)
 - File Reader (Large File)
 - Bookmarks - Show shortcut in the directory pane/home ( Favourites )
+- Map keyboard shortcuts with programs(like opening bash), Toolbar like weapon wheel in games
 - Multi Window (v2)
 - Tabbed Window (v2)
 - File Sync Over Network (Maybe)
