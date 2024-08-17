@@ -28,8 +28,6 @@ function App() {
     console.log(wbFile);
     // writeFile(wbFile, "Test.xlsx");
     await saveFile(wbFile);
-    
-
   }
 
   async function readDir(newPath: string|null) {

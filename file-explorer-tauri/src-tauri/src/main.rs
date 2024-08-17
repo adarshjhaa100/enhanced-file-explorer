@@ -22,7 +22,7 @@ use std::{
 pub mod file_explorer_api {
 
     pub mod fs_directory {
-
+    
     }
 
     pub mod fs_file {
@@ -176,7 +176,7 @@ fn main() {
         .invoke_handler(tauri::generate_handler![
             greet, 
             read_dir,
-            read_file_custom
+            read_file_custom,
             ]) //add the rust function here to invoke from JS
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
